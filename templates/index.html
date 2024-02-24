@@ -1,0 +1,130 @@
+{% comment %} <!doctype html>
+<html>
+    <head>
+        <title>Django</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1><a href="/">Django</a></h1>
+        <ol>
+            <li><a href="/chatgpt/">ChatGPT API 사용</a></li>
+            <li><a href="/signlanguagetochatgpt/">수어-ChatGPT 연동</a></li>
+            <li><a href="/selfchatgpt/">내가 만든 쿠키1</a></li>
+            <li><a href="/selfsignlanguagetochatgpt/">내가 만든 쿠키2</a></li>
+        </ol>
+        <h2>Django</h2>
+        <p><a href="https://www.djangoproject.com/" target="_blank">Django</a>는 Python으로 작성된 오픈 소스 웹 프레임워크로, 빠르고 쉬운 웹 개발을 가능하게 합니다.</p>
+    </body>
+<html> {% endcomment %}
+
+{% comment %} {% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'main.css' %}">
+{% endblock %}
+<!doctype html>
+    <html>
+        <head>
+            <title>Main</title>
+            <meta charset="utf-8">
+            <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+        </head>
+        <body>
+            <header class="header">
+                <nav class="wrap">
+                    <ul>
+                        <li><a href="" class="active">Home</a></li>
+                        <li><a href="/chatgpt/" class="active">ChatGPT</a></li>
+                        <li><a href="/signlanguagetochatgpt/" class="active">SignLanguage</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="contents">
+                <section class="wrap">
+                    <h1>수어 이미지 ChatGPT 번역 프로그램</h1>
+                    <h2>수어 이미지 ChatGPT 번역 프로그램이란?</h2>
+                    <p>수어 이미지를 업로드하여 해당이미지를 텍스트로 변환하고 이를 Chat-GPT API를 활용하여</p>
+                    <p> ChatGPT 알고리즘으로 번역 시켜주는 수어를 텍스트로 변환 시켜주는 프로그램입니다.</p>
+                </section>
+            </main>
+            <footer class="footer">
+                <p>All rights reserved. ©AI_27</p>
+            </footer>
+        </body> {% endcomment %}
+
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'main.css' %}">
+{% endblock %}
+<!doctype html>
+<html>
+    <head>
+        <title>Django</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div class ="whole">
+            <div class="w-btn">
+                <div class="w-btn-indigo" onclick="location.href=''" type='button'>HOME</div>
+            </div>
+            <div class="w-btn1">
+                <div class="w-btn-indigo1" onclick="location.href='/chatgpt/'" type='button'>CHAT GPT</div>
+            </div>
+            <div class="w-btn2">
+                <div class="w-btn-indigo2" onclick="location.href='/signlanguagetochatgpt/'" type='button'>SIGNLANGUAGE</div>
+            </div>
+        <div class="center-text">수어 이미지 Chat-GPT 번역 프로그램</div>
+        <div class="center-under">수어 이미지 Chat - GPT 번역 프로그램이란?</div>
+        <div class="explain">수어 이미지를 업로드하여 해당이미지를 텍스트로 변환하고 
+                이를 Chat-GPT API를 활용하여
+             Chat-GPT 알고리즘으로 번역 시켜주는 수어를 텍스트로 변환 시켜주는 프로그램입니다.</div>
+                 
+             <svg xmlns="http://www.w3.org/2000/svg" width="4000" height="1200" viewBox="-600 -100 4000 1200" fill="none">
+                <!-- 첫 번째 도형 -->
+                <g transform="translate(600, 0)">
+                    <path d="M113.077 578.573C105.202 571.713 92.3546 612.282 0.965635 618.893L0.965635 625.974L1253.13 625.974L1253.13 94.9238L1187.08 124.523C1155.1 140.531 1055.97 119.568 989.644 33.9594C902.155 -56.9734 851.61 60.5371 813.454 96.8956C739.769 167.109 570.634 287.396 483.568 206.842C448.863 169.355 371.959 150.159 280.131 258.027C230.848 333.455 236.038 336.441 173.7 376.194C110.947 416.211 133.11 525.142 113.077 558.573Z" fill="url(#paint0_linear_20_5258)"/>
+                </g>
+                <defs>
+                    <linearGradient id="paint0_linear_20_5258" x1="653.751" y1="-594.014" x2="866.52" y2="657.007" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FEB31E"/>
+                        <stop offset="1" stop-color="#FEB31E" stop-opacity="0"/>
+                    </linearGradient>
+                </defs>
+            
+                <!-- 두 번째 도형 -->
+                <g transform="translate(-480, 0)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2800" height="1200" viewBox="0 0 2800 1200" fill="none">
+                        <path d="M175.5 36.3119C160.415 24.5232 130.236 -15.8278 -2.39452 8.40796L-54.4966 688.811L1908.56 577.643L1940.94 154.76L1837.85 144.878C1787.46 138.24 1651.79 195.585 1581.83 312.974C1483.16 443.542 1376.68 331.263 1311.53 304.292C1185.71 252.209 908.81 177.784 807.723 296.749C768.994 350.106 664.588 397.832 501.87 310.442C409.438 244.181 415.991 239.094 315.268 216.721C213.874 194.199 213.879 66.3029 175.5 36.3119Z" fill="url(#paint0_linear_20_5266)"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_20_5266" x1="924.38" y1="-566.024" x2="821.277" y2="617.631" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF0000"/>
+                                <stop offset="1" stop-color="#FF0000" stop-opacity="0"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </g>
+            
+                <!-- 세 번째 도형 -->
+                <g transform="translate(-100, 0)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2800" height="1200" viewBox="0 0 2800 1200" fill="none">
+                        <path d="M-39.863 268.552C-51.1082 278.382 -76.0043 312.39 -156.563 289.415L-156.563 355.916L1095.59 355.916L1095.59 197.07L1028.86 203.781C995.986 208.608 918.237 157.258 890.722 55.6535C846.9 -57.7106 763.366 36.5397 718.229 58.5104C631.063 100.939 444.978 159.926 397.966 56.4464C381.067 10.1468 321.754 -32.4458 206.153 39.5622C138.107 94.6826 141.53 99.1451 74.5144 116.582C7.05187 134.135 -11.2545 243.545 -39.863 268.552Z" fill="url(#paint0_linear_20_5259)" fill-opacity="0.5"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_20_5259" x1="544.942" y1="-393.066" x2="589.847" y2="352.478" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#00FF29"/>
+                                <stop offset="1" stop-color="#00FF29" stop-opacity="0"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </g>
+            </svg>
+            
+            
+            
+            
+            
+            
+            
+        </div>
+        
+
+        
+    </body>

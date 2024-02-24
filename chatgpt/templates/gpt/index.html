@@ -1,0 +1,59 @@
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'gpt/style.css' %}">
+{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'gpt/style.css' %}">
+    <title>ChatGPT Chat</title>
+</head>
+<body>
+    <div class="button-container">
+        <div class="w-btn">
+            <div class="w-btn-indigo" onclick="location.href='../'" type='button'>HOME</div>
+        </div>
+        <div class="w-btn1">
+            <div class="w-btn-indigo1" onclick="location.href='/chatgpt/'" type='button'>CHAT GPT</div>
+        </div>
+        <div class="w-btn2">
+            <div class="w-btn-indigo2" onclick="location.href='/signlanguagetochatgpt/'" type='button'>SIGNLANGUAGE</div>
+        </div>
+    </div>
+    <div id="chat-container">
+        <div id="chat-box"></div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="send-btn" onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var userMessage = document.getElementById('user-input').value;
+            if (userMessage.trim() === '') return;
+    
+            var chatBox = document.getElementById('chat-box');
+            chatBox.innerHTML += '<div class="message user-message">' + userMessage + '</div>';
+    
+            // chat gpt 메세지 보내기
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'chat/', true); 
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var botResponse = JSON.parse(xhr.responseText).result;
+                    chatBox.innerHTML += '<div class="message bot-message">' + botResponse + '</div>';
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                }
+            };
+    
+            xhr.send('question=' + encodeURIComponent(userMessage));
+
+            document.getElementById('user-input').value = '';
+        }
+    </script>
+    
+</body>
+</html>
